@@ -12,3 +12,12 @@
 .App {
     width: 800px;
 }
+
+.labelPostsNotFound {
+    text-align: center;
+    font-size: 36px;
+}
+
+.separator {
+    margin: 15px 0;
+}
