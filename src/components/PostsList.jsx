@@ -1,12 +1,20 @@
 import React from 'react';
-import s from "../styles/Post.module.css"
 import {Post} from "./Post";
+import {TransitionGroup, CSSTransition} from "react-transition-group"
 
 export const PostsList = props => {
+  if (!props.posts.length) {
+    return <h2 className="labelPostsNotFound">Posts not found</h2>
+  }
+
   return (
-    <div >
-      <h2 className={s.postsListTitle}>{props.title}</h2>
-      {props.posts.map((post, index) => <Post key={post.id} number={index+1} post={post} remove={props.remove}/>)}
+    <div>
+      <h2 className="postsListTitle">{props.title}</h2>
+      <TransitionGroup>
+        {props.posts.map((post, index) => <CSSTransition key={post.id} timeout={500} className="post">
+          <Post number={index + 1} post={post} remove={props.remove}/>
+        </CSSTransition>)}
+      </TransitionGroup>
     </div>
   );
 };
