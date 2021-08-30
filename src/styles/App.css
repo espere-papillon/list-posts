@@ -21,3 +21,54 @@
 .separator {
     margin: 15px 0;
 }
+
+.post {
+    display: flex;
+    padding: 15px;
+    border: 2px solid #3c0080;
+    margin-top: 15px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.postsListTitle {
+    text-align: center;
+    font-size: 36px;
+}
+
+.post-enter {
+    transform: translateX(-400px);
+}
+.post-enter-active {
+    transform: translateX(0);
+    transition: all 500ms ease-in;
+}
+.post-exit {
+    opacity: 1;
+}
+.post-exit-active {
+    transform: translateX(-400px);
+    transition: all 500ms ease-in;
+}
+
+.containerLoader {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.pagesWrapper {
+    margin-top: 30px;
+    display: flex;
+}
+
+.page {
+    padding: 10px;
+    border: 1px solid #3c0080;
+    cursor: pointer;
+}
+
+.pageCurrent {
+    border: 2px solid #FFA500FF;
+    font-weight: bold;
+}
