@@ -31,7 +31,7 @@ export const PostPage = () => {
       <h2 className="containerLoader">Comments:</h2>
       {isComLoading
         ? <Loader/>
-        : <div>{comments.map(comm => <div style={{marginTop: 15}}>
+        : <div>{comments.map(comm => <div key={comm.id} style={{marginTop: 15}}>
           <h4>{comm.email}</h4>
           <h4>{comm.body}</h4>
         </div>)}</div>
